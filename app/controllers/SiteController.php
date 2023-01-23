@@ -23,6 +23,24 @@
             header("Access-Control-Allow-Headers: X-Requested-With"); 
             header('Content-Type: application/json; charset=utf-8');
         }
+
+        // get api token from query-string
+        public function getAPIToken() {
+
+            global $securityController;
+
+            // check if token is empty
+            if (empty($_GET["token"])) {
+                $token = null;
+            } else {
+
+                // escape token
+                $token = $securityController->escapeString($_GET["token"]);
+            }
+
+            // return final token value
+            return $token;
+        }
     }
 
 

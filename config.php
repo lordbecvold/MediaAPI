@@ -9,7 +9,10 @@
             "dev_mode"  => true,
 
             // https (enable only https access to api)
-            "https"     => false
+            "https"     => false,
+
+            // token for validate request access
+            "token"     => "1234"
         ];
     }
 ?>
