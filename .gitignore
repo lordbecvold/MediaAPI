@@ -3,3 +3,4 @@ vendor/
 storage/images/*
 storage/gifs/*
 storage/videos/*
+storage/test_category/*

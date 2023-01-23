@@ -66,13 +66,13 @@
     }
 
     // check if media type valid
-    if (($siteController->getMediaType() != "image") && ($siteController->getMediaType() != "video") && ($siteController->getMediaType() != "gif")) {
+    if (!file_exists($config->config["storage_path"]."/".$siteController->getMediaType())) {
 
         // send invalid type error
-        $outputController->errorOutput(6, "media type is invalid, available types is:(image, video, gif)");  
+        $outputController->errorOutput(6, "media type ".$siteController->getMediaType()." not found");  
     }
 
-    //////////////////////////// MAIN-API-FUNCTION ////////////////////////////
+    ////////////////////////////////// MAIN-API-FUNCTION ////////////////////////////////
     $outputController->mediaOutput("name_idk", $siteController->getMediaType(), "link");
-    ///////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////
 ?>
