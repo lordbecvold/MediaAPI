@@ -80,8 +80,14 @@
     // get media name
     $name = $resourcesController->getMedia($type);
 
+    if ($config->config["https"] == true) {
+        $protocol = "https://";
+    } else {
+        $protocol = "http://";
+    }
+
     // get media link
-    $link = "link to ".$name;
+    $link = $protocol.$_SERVER["HTTP_HOST"]."/viewer.php?category=$type&file=$name";
 
     // send media response
     $outputController->mediaOutput($name , $type, $link);

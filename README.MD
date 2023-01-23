@@ -18,5 +18,13 @@ erros
 5 - add media parameter to url
 6 - media type not found
 
+viewer errors
+7 - category get parameter not found
+8 - file get parameter not found
+9 - category get parameter contains insecure character '/'
+10 - file get parameter contains insecure character '/'
+11 - media or category not found
+
+
 libs 
 - whoois
