@@ -7,12 +7,7 @@
     $config = new api\config\PageConfig();
 
     // init controllers
-    require_once("../app/controllers/SiteController.php");
-    $siteController = new \api\controllers\SiteController();
-    require_once("../app/controllers/OutputController.php");
-    $outputController = new \api\controllers\OutputController();
-    require_once("../app/controllers/SecurityController.php");
-    $securityController = new \api\controllers\SecurityController();
+    require_once("../app/ControllerManager.php");
 
     // init error handler if dev mode enabled 
     if ($config->config["dev_mode"] == true) {
@@ -53,7 +48,12 @@
         }
     }
     
+    // init resource manager
+    $resourcesController->init();
+
+    //////////////////////////// MAIN-API-FUNCTION ////////////////////////////
     echo "api";
+    ///////////////////////////////////////////////////////////////////////////
 
 
 

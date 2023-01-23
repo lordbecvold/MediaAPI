@@ -6,13 +6,15 @@
         public $config = [
 
             // dev-mode (enable whoois and others error handlerers)
-            "dev_mode"  => true,
+            "dev_mode" => true,
 
             // https (enable only https access to api)
-            "https"     => false,
+            "https" => false,
 
             // token for validate request access
-            "token"     => "1234"
+            "token" => "1234",
+
+            "storage_path" => "../storage"
         ];
     }
 ?>
