@@ -87,7 +87,7 @@
     }
 
     // get media link
-    $link = $protocol.$_SERVER["HTTP_HOST"]."/viewer.php?category=$type&file=$name";
+    $link = $protocol.$_SERVER["HTTP_HOST"]."/viewer.php?token=".$config->config["token"]."&category=$type&file=$name";
 
     // send media response
     $outputController->mediaOutput($name , $type, $link);

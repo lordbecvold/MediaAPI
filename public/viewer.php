@@ -17,6 +17,16 @@
         $whoops->register();
     }
 
+    // check if requst used invalid api token
+    if ($siteController->getAPIToken() != $config->config["token"]) {
+
+        if ($siteController->getAPIToken() == null) {
+            $outputController->errorOutput(3, "API token required");
+        } else {
+            $outputController->errorOutput(4, "API token is invalid");       
+        }
+    }
+
     // check if category not empty
     if (empty($_GET["category"])) {
 
