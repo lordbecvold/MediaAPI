@@ -41,7 +41,23 @@
             // return final token value
             return $token;
         }
+
+        // get media type from query-string
+        public function getMediaType() {
+
+            global $securityController;
+
+            // check if media is empty
+            if (empty($_GET["media"])) {
+                $media = null;
+            } else {
+
+                // escape media
+                $media = $securityController->escapeString($_GET["media"]);
+            }
+
+            // return final media value
+            return $media;
+        }
     }
-
-
 ?>

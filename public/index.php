@@ -51,11 +51,18 @@
     // init resource manager
     $resourcesController->init();
 
+    // check if media type available
+    if ($siteController->getMediaType() == null) {
+        $outputController->errorOutput(5, "media parameter is empty");  
+    }
+
+    // check if media type valid
+    if (($siteController->getMediaType() != "image") && ($siteController->getMediaType() != "video") && ($siteController->getMediaType() != "gif")) {
+
+        $outputController->errorOutput(6, "media type is invalid, available types is:(image, video, gif)");  
+    }
+
     //////////////////////////// MAIN-API-FUNCTION ////////////////////////////
     echo "api";
     ///////////////////////////////////////////////////////////////////////////
-
-
-
-    
 ?>
