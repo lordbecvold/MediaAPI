@@ -14,6 +14,7 @@
             // token for validate request access
             "token" => "1234",
 
+            // default storage path
             "storage_path" => "../storage"
         ];
     }

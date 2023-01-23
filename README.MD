@@ -1,30 +1,35 @@
-# api
+# RANDOM MEDIA API
 
-config
-- config decs
+thsi API is for storing images, videos and gif on the web space.
 
-install instruction
+# CONFIG
+- dev_mode: enable php error handlerer
+- https: enable only https access
+- token: token for validate request access
+- storage_path: default subfolder storage
+
+# INSTALLATION
 - run install script
 - set web root public/
 - grant file write permission
 - grant file read permission
 - add all media to sub dirs (requires use names without space)
 
-erros
+# ERROR CODES
 1 - https required error
 2 - config value token is empty or null
 3 - api token is null use /?token=1234
 4 - api token is invalid
 5 - add media parameter to url
 6 - media type not found
-
-viewer errors
 7 - category get parameter not found
 8 - file get parameter not found
 9 - category get parameter contains insecure character '/'
 10 - file get parameter contains insecure character '/'
 11 - media or category not found
 
-
-libs 
-- whoois
+## Dependencies
+This project requires PHP8 or < .
+* Whoops
+   * Version: **2.14**
+   * [Github](https://github.com/filp/whoops)
