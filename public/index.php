@@ -73,6 +73,17 @@
     }
 
     ////////////////////////////////// MAIN-API-FUNCTION ////////////////////////////////
-    $outputController->mediaOutput("name_idk", $siteController->getMediaType(), "link");
+
+    // get media type
+    $type = $siteController->getMediaType();
+
+    // get media name
+    $name = $resourcesController->getMedia($type);
+
+    // get media link
+    $link = "link to ".$name;
+
+    // send media response
+    $outputController->mediaOutput($name , $type, $link);
     /////////////////////////////////////////////////////////////////////////////////////
 ?>

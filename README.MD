@@ -15,7 +15,7 @@ erros
 3 - api token is null use /?token=1234
 4 - api token is invalid
 5 - add media parameter to url
-6 - media type invalid
+6 - media type not found
 
 libs 
 - whoois

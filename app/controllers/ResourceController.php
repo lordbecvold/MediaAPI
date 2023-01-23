@@ -55,5 +55,30 @@
                 return true;
             } 
         }
+
+        // get random media by category
+        public function getMedia($category) {
+
+            global $config;
+
+            // dir path builder
+            $path = $config->config["storage_path"]."/".$category."/";
+
+            // check if path exist
+            if (file_exists($path)) {
+                
+                // get files array
+                $files = glob($path."*.*");
+
+                // randomize array
+                shuffle($files);
+
+                // strip file path
+                $file = str_replace("../storage/$category/", "", $files[0]);
+
+                // return file
+                return $file;
+            } 
+        }
     }
 ?>
