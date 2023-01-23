@@ -3,6 +3,11 @@
 config
 - config decs
 
+install instruction
+- run install script
+- set web root public/
+- grant file write permission
+- grant file read permission
 
 erros
 1 - https required error
