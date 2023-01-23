@@ -10,6 +10,9 @@
             // send api return headers
             $siteController->sendAPIHeaders();
 
+            // send response code
+            http_response_code(400);
+
             // build error json
             $arr = [
                 "status" => "error",
@@ -27,6 +30,9 @@
             
             // send api return headers
             $siteController->sendAPIHeaders();
+
+            // send response code
+            http_response_code(200);
 
             // build response json
             $arr = [
