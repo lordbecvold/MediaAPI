@@ -59,5 +59,20 @@
             // return final media value
             return $media;
         }
+
+        // get site protocol
+        public function getProtocol() {
+
+            global $config;
+
+            // check if https only enabled
+            if ($config->config["https"] == true) {
+                $protocol = "https://";
+            } else {
+                $protocol = "http://";
+            }
+
+            return $protocol;
+        }
     }
 ?>

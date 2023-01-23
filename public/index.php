@@ -80,11 +80,8 @@
     // get media name
     $name = $resourcesController->getMedia($type);
 
-    if ($config->config["https"] == true) {
-        $protocol = "https://";
-    } else {
-        $protocol = "http://";
-    }
+    // get site running protocol
+    $protocol = $siteController->getProtocol();
 
     // get media link
     $link = $protocol.$_SERVER["HTTP_HOST"]."/viewer.php?token=".$config->config["token"]."&category=$type&file=$name";
