@@ -8,6 +8,7 @@ install instruction
 - set web root public/
 - grant file write permission
 - grant file read permission
+- add all media to sub dirs (requires use names without space)
 
 erros
 1 - https required error

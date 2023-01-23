@@ -31,7 +31,7 @@
             // build response json
             $arr = [
                 "status" => "success",
-                "code" => 1,
+                "code" => 0,
                 "name" => $name,
                 "type" => $type,
                 "link" => $link
@@ -41,6 +41,4 @@
             echo json_encode($arr);
         }
     }
-
-
 ?>
