@@ -3,7 +3,8 @@
 
     class resourceController {
 
-        public function init() {
+        // init resource manager
+        public function createSturcture() {
             
             global $config;
 
@@ -35,6 +36,35 @@
                 @mkdir($config->config["storage_path"]."/videos"); 
             } 
         }
-    }
+    
+        // check if resource structure valid
+        public function checkResourceStrucutre() {
 
+            global $config;
+
+            // check if storage path exist (main path)
+            if (file_exists($config->config["storage_path"])) {
+                
+                return true;
+            } 
+
+            // check if storage path exist (images)
+            if (file_exists($config->config["storage_path"]."/images")) {
+                
+                return true;
+            } 
+
+            // check if storage path exist (gifs)
+            if (file_exists($config->config["storage_path"]."/gifs")) {
+                
+                return true;; 
+            } 
+
+            // check if storage path exist (videos)
+            if (file_exists($config->config["storage_path"]."/videos")) {
+                
+                return true;
+            } 
+        }
+    }
 ?>

@@ -48,17 +48,27 @@
         }
     }
     
-    // init resource manager
-    $resourcesController->init();
+    // check if resource strucute is valud
+    if ($resourcesController->checkResourceStrucutre() == false) {
+
+        // create default storage structure
+        $resourcesController->createSturcture();
+
+        // send invalid resource structure error
+        $outputController->errorOutput(7, "Resource strucure is invalud, check file write/read permission");
+    }
 
     // check if media type available
     if ($siteController->getMediaType() == null) {
+
+        // send media type not found error
         $outputController->errorOutput(5, "media parameter is empty");  
     }
 
     // check if media type valid
     if (($siteController->getMediaType() != "image") && ($siteController->getMediaType() != "video") && ($siteController->getMediaType() != "gif")) {
 
+        // send invalid type error
         $outputController->errorOutput(6, "media type is invalid, available types is:(image, video, gif)");  
     }
 
