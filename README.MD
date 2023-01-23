@@ -1,6 +1,6 @@
 # RANDOM MEDIA API
 
-thsi API is for storing images, videos and gif on the web space.
+this API is for storing images, videos and gif on the web space.
 
 # CONFIG
 - dev_mode: enable php error handlerer
