@@ -2,6 +2,9 @@
 
 this API is for storing images, videos and gif on the web space.
 
+# INFO
+I coded this app for my friend and I decided to add it to my repository, maybe it will be useful for someone even if it is not very modular
+
 # CONFIG
 - dev_mode: enable php error handlerer
 - https: enable only https access
