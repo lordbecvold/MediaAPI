@@ -36,3 +36,9 @@ This project requires PHP8 or < .
 * Whoops
    * Version: **2.14**
    * [Github](https://github.com/filp/whoops)
+
+## End of support
+This project is no longer being maintained or developed, and no updates or support will be provided.
+
+## License
+This software is licensed under the [MIT license](https://github.com/lukasbecvar/media-apt/blob/main/LICENSE).
