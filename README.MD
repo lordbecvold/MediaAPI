@@ -1,5 +1,5 @@
 # RANDOM MEDIA API
-this API is for storing images, videos and gif on the web space.
+This API is for storing images, videos and gif on the web space.
 
 > [!WARNING]
 > ### End of support
