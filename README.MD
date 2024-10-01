@@ -1,6 +1,9 @@
 # RANDOM MEDIA API
-
 this API is for storing images, videos and gif on the web space.
+
+> [!WARNING]
+> ### End of support
+> This project will no longer be updated or maintained.
 
 # INFO
 I coded this app for my friend and I decided to add it to my repository, maybe it will be useful for someone even if it is not very modular
@@ -36,9 +39,6 @@ This project requires PHP8 or < .
 * Whoops
    * Version: **2.14**
    * [Github](https://github.com/filp/whoops)
-
-## End of support
-This project is no longer being maintained or developed, and no updates or support will be provided.
 
 ## License
 This software is licensed under the [MIT license](https://github.com/lukasbecvar/media-api/blob/main/LICENSE).
